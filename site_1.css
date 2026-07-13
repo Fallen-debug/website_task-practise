@@ -1,0 +1,221 @@
+/*Author: Anna Glavatska*/
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; 
+    background-color: #f9f9f9;
+}
+
+/*top*/
+
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; 
+}
+
+nav ul {
+    list-style: none; 
+    display: flex;    
+    gap: 20px;        
+    margin: 0;
+    padding: 0;
+}
+nav > ul > li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+nav a:hover {
+    color: #4f37b9; 
+    text-decoration: none;
+}
+
+
+/*main*/
+
+
+
+main {
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 0 20px;
+}
+.contents_tab ol li a {
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.contents_tab ol li {
+    padding-bottom: 10px;
+}
+h1, h3 {
+    text-align: center;
+
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+.introduction > p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #eef;
+    padding: 15px;
+    border-left: 5px solid #2c3e50;
+}
+
+main ul li {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+h2 + p {
+    margin-top: 10px;
+}
+section h1{
+    text-align: center;
+}
+section h1 + h3{
+    text-align: center;
+}
+section h1 + h3 + p{
+    text-align: center;
+} 
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 100%;
+}
+#Information {
+    padding-top: 10px;
+}
+
+/*grid*/
+.image {
+    grid-area: pic;
+
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+}
+
+.information {
+    grid-area: info;
+}
+.ausbildung {
+    grid-area: ausbildung;
+}
+.socials {
+    grid-area: socials;
+}
+.erfahrungen{
+    grid-area: erfahrungen;
+}
+.kompetenzen{
+    grid-area: kompetenzen;
+}
+.hobbies {
+    grid-area: hobbies;
+}
+.mob {
+    display: grid;
+    grid-area: mob;
+    grid-template-columns: 1fr;
+
+}
+
+@media screen and (min-width: 1600px) {
+    .grid-container {
+        display: grid;       
+        gap: 0;
+        grid-auto-rows: auto;   
+        grid-template-columns: 1fr 2fr; 
+
+        grid-template-areas: 
+        "pic info"
+        "socials ausbildung"
+        "kompetenzen erfahrungen"
+        "kompetenzen hobbies";
+
+    }
+    .image {
+        width: 100%;
+        height: auto;
+    }
+    section {
+        border-radius: 0;
+        border-bottom: 0;
+        padding-left: 20px;
+        padding-right: 40px;
+        box-shadow: none;
+        border: none;
+        border-collapse: collapse;
+        font-size: 1.3rem;
+        
+
+    }
+    section h1{
+        text-align: left;
+    }
+    section h1 + h3{
+        text-align: left;
+    }
+    section h1 + h3 + p{
+    text-align: left;
+} 
+}
+/*   
+    grid classes:
+image           
+information
+ausbildung
+socials
+erfahrungen
+kompetenzen
+hobbies
+*/
+
+
+
+
+
+/*footer*/
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 50px;
+}
+
+footer button {
+    background-color: #00bfff;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer button:hover {
+    background-color: #009acd;
+}

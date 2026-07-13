@@ -1,0 +1,12 @@
+pages:
+  stage: deploy
+  script:
+    - echo "Moving files to public folder..."
+    - New-Item -ItemType Directory -Force -Path public
+    - Copy-Item -Path *.html, *.css, *.js -Destination public
+    - cp -r pictures public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
